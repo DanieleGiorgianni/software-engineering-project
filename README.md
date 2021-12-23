@@ -1,16 +1,17 @@
-# Software Engineering - a.a. 2019-2020
+# Software Engineering
 ### Project of the year 2020
+
+## PROJECT
+With this project I and 2 of my colleagues developed an online version of the board game [*Santorini*](https://tabletopia.com/games/santorini).
 
 ![alt text](https://2.bp.blogspot.com/-YHuiYPBEHKs/WVKpXTzu5KI/AAAAAAAAYCs/pTVyng97P3EDoLq9PMqVv18ECzBD4K2CwCLcBGAs/s1600/copertina_santorini_2016.jpg)
 
-The project required to implement the board game [*Santorini*](https://tabletopia.com/games/santorini).
-
-It was developed by:
+The project was developed by:
 - [**Daniele Giorgianni**](https://github.com/DanieleGiorgianni)
 - [**Luca Giudici**](https://github.com/LucaGiudiciPoliMi)
 - [**Francesco Govigli**](https://github.com/FrancescoGovigli)
 
-## Useful links
+## USEFUL LINKS
 ### UML
 The UML diagrams are available from the folder: [*UML*](https://github.com/DanieleGiorgianni/software-engineering-project/tree/main/deliveries/final/uml).
 ### JavaDoc
@@ -18,7 +19,7 @@ JavaDoc can be found in the folder: [*Javadoc*](https://github.com/DanieleGiorgi
 ### JAR
 JAR files can be found in the folder: [*JAR*](https://github.com/DanieleGiorgianni/software-engineering-project/tree/main/deliveries/final/jar).
 
-## Features developed
+## FEATURES DEVELOPED
 The developed project implements the following features by doing
 reference to the requirements specified by the teachers:
 - Complete rules
@@ -27,7 +28,7 @@ reference to the requirements specified by the teachers:
 - Socket
 - 1 Advanced Functionality (Undo)
 
-## Instructions on how to perform JARs
+## INSTRUCTIONS ON HOW TO PERFORM JARs
 The game can be run both locally and via the network.<br />
 In the first case just follow the instructions **(1)**, in the second case the instructions **(2)**.<br />
 The game can be launched in two modes, via command line or with a graphical interface.<br />
@@ -72,7 +73,7 @@ Oracle Development Kit 8 (available at the link [*JDKDownload*](https://www.orac
 
 - **(2)** Once the client's JAR has been downloaded (see link above), just double-click on the clientApp.jar file, both on Windows than on MacOs. When insertion is requested of the IP address, you will need to enter it in the text box the IP address of the Server and then press the button *"Connect & Play"*.
 
-## Tips for Distributed Architecture
+## TIPS FOR DISTRIBUTED ARCHITECTURE
 If you want to use a Personal Computer as a Server it is recommend to:
 - Download the free application [*LogMeInHamachi*](https://www.vpn.net/)
 - Create an account (following the directions provided by the application)
