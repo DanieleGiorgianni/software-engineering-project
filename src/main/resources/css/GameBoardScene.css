@@ -1,0 +1,61 @@
+root {
+    display: block;
+}
+
+.root {
+    -fx-pref-width: 1200px;
+    -fx-pref-height: 672px;
+    -fx-background-image: url("../images/GameBoardNoPanel.png");
+    -fx-background-size: stretch;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+#santoriniLogo{
+    -fx-background-image: url("../images/santorini-logo.png");
+    -fx-background-size: stretch;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+#messageCloud{
+    -fx-background-image: url("../images/PopUp.png");
+    -fx-background-size: stretch;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+#gameMessage{
+    -fx-font-family: "Dalek Pinpoint";
+    -fx-font-size: 14;
+    -fx-text-fill: white;
+    -fx-text-alignment: center;
+}
+
+#player{
+    -fx-background-image: url("../images/btn_blue_pressed.png");
+    -fx-background-size: stretch;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+#currentPlayer{
+    -fx-background-image: url("../images/btn_green_pressed.png");
+    -fx-background-size: stretch;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+#gamePlayersLabel{
+    -fx-font-family: "Dalek Pinpoint";
+    -fx-font-size: 17;
+    -fx-text-fill: white;
+    -fx-text-alignment: center;
+}
+
+#playerList {
+    -fx-background-image: url("../images/glassBackground.png");
+    -fx-background-size: stretch;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}

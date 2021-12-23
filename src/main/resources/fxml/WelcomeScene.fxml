@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane id="back"
+          xmlns="http://javafx.com/javafx/10.0.2-internal"
+          xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="it.polimi.ingsw.PSP42.client.clientView.ControllerWelcomeScene">
+
+   <GridPane GridPane.columnIndex="0" GridPane.rowIndex="1" focusTraversable="true">
+
+      <Pane fx:id="statusPane"
+            GridPane.rowIndex="1" GridPane.columnIndex="1"
+            GridPane.halignment="CENTER" GridPane.valignment="CENTER"/>
+
+      <Label id="statusLabel"
+             fx:id="statusLabel"
+             alignment="CENTER"
+             GridPane.rowIndex="1" GridPane.columnIndex="1"
+             GridPane.halignment="CENTER" GridPane.valignment="CENTER"/>
+
+      <GridPane GridPane.rowIndex="3" GridPane.columnIndex="1">
+
+         <TextField id="textfield"
+                    fx:id="textFieldIP"
+                    alignment="CENTER"
+                    onMouseClicked="#deleteText"
+                    text="Insert Host IP Address"
+                    prefHeight="40.0" prefWidth="185.0"
+                    GridPane.columnIndex="1" GridPane.rowIndex="0"
+                    GridPane.halignment="CENTER" GridPane.valignment="CENTER"/>
+
+         <rowConstraints>
+            <RowConstraints percentHeight="100" />
+         </rowConstraints>
+         <columnConstraints>
+            <ColumnConstraints percentWidth="20" />
+            <ColumnConstraints percentWidth="60" />
+            <ColumnConstraints percentWidth="20" />
+         </columnConstraints>
+      </GridPane>
+
+      <rowConstraints>
+         <RowConstraints percentHeight="60" />
+         <RowConstraints percentHeight="15" />
+         <RowConstraints percentHeight="3" />
+         <RowConstraints percentHeight="12" />
+      </rowConstraints>
+      <columnConstraints>
+         <ColumnConstraints percentWidth="35" />
+         <ColumnConstraints percentWidth="30" />
+         <ColumnConstraints percentWidth="35" />
+      </columnConstraints>
+   </GridPane>
+
+   <GridPane GridPane.columnIndex="0" GridPane.rowIndex="2">
+
+      <Button id="playButton"
+              onAction="#goToWaitingScene"
+              alignment="CENTER"
+              prefHeight="70.0" prefWidth="180.0"
+              text="CONNECT &amp; PLAY"
+              textAlignment="CENTER"
+              GridPane.rowIndex="1" GridPane.columnIndex="1"
+              GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+
+      <rowConstraints>
+         <RowConstraints percentHeight="5" />
+         <RowConstraints percentHeight="45" />
+         <RowConstraints percentHeight="50" />
+      </rowConstraints>
+      <columnConstraints>
+         <ColumnConstraints percentWidth="40" />
+         <ColumnConstraints percentWidth="20" />
+         <ColumnConstraints percentWidth="40" />
+      </columnConstraints>
+   </GridPane>
+
+   <rowConstraints>
+      <RowConstraints percentHeight="10" />
+      <RowConstraints percentHeight="60" />
+      <RowConstraints percentHeight="30" />
+   </rowConstraints>
+   <columnConstraints>
+      <ColumnConstraints percentWidth="100" />
+   </columnConstraints>
+
+   <stylesheets>
+      <URL value="@../css/WelcomeScene.css" />
+   </stylesheets>
+</GridPane>

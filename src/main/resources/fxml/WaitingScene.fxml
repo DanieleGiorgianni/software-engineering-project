@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+
+<GridPane id="back">
+
+    <GridPane GridPane.rowIndex="1" GridPane.columnIndex="0">
+
+        <ProgressIndicator id="progressIndicator"
+                           GridPane.rowIndex="1" GridPane.columnIndex="1"
+                           GridPane.valignment="CENTER" GridPane.halignment="RIGHT"
+                           prefHeight="30.0" prefWidth="20.0"/>
+
+        <Label id="progressLabel"
+               GridPane.rowIndex="1" GridPane.columnIndex="1"
+               GridPane.valignment="CENTER" GridPane.halignment="LEFT"
+               prefHeight="125.0" prefWidth="262.0"
+               text="WAITING OTHER PLAYERS..."/>
+
+        <rowConstraints>
+            <RowConstraints percentHeight="10"/>
+            <RowConstraints percentHeight="40"/>
+            <RowConstraints percentHeight="50"/>
+        </rowConstraints>
+        <columnConstraints>
+            <ColumnConstraints percentWidth="35"/>
+            <ColumnConstraints percentWidth="30"/>
+            <ColumnConstraints percentWidth="35"/>
+        </columnConstraints>
+    </GridPane>
+
+    <rowConstraints>
+        <RowConstraints percentHeight="70"/>
+        <RowConstraints percentHeight="30"/>
+    </rowConstraints>
+    <columnConstraints>
+        <ColumnConstraints percentWidth="100"/>
+    </columnConstraints>
+
+    <stylesheets>
+        <URL value="@../css/WelcomeScene.css"/>
+    </stylesheets>
+</GridPane>

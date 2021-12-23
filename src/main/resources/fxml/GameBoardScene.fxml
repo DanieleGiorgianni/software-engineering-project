@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane fx:id="root"
+          xmlns="http://javafx.com/javafx/10.0.2-internal"
+          xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="it.polimi.ingsw.PSP42.client.clientView.ControllerGameBoardScene" >
+
+    <Pane id="santoriniLogo"
+          GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+    <!--Game Message-->
+    <GridPane GridPane.columnIndex="1" GridPane.halignment="CENTER"
+              GridPane.rowIndex="0" GridPane.valignment="CENTER" >
+
+        <Pane id="messageCloud"
+              GridPane.columnIndex="1" GridPane.halignment="CENTER"
+              GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+
+        <Label id="gameMessage"
+               fx:id="GameLabel"
+               GridPane.columnIndex="1" GridPane.halignment="CENTER"
+               GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+
+        <rowConstraints>
+            <RowConstraints percentHeight="15" />
+            <RowConstraints percentHeight="70" />
+            <RowConstraints percentHeight="15" />
+        </rowConstraints>
+        <columnConstraints>
+            <ColumnConstraints percentWidth="1" />
+            <ColumnConstraints percentWidth="98" />
+            <ColumnConstraints percentWidth="1" />
+        </columnConstraints>
+    </GridPane>
+
+    <!--Players' List Update-->
+    <GridPane GridPane.columnIndex="0" GridPane.rowIndex="1" >
+
+        <GridPane id="playerList"
+                  GridPane.columnIndex="1" GridPane.rowIndex="1">
+
+            <GridPane GridPane.columnIndex="0" GridPane.rowIndex="0">
+                <Label id="gamePlayersLabel"
+                       text="PLAYERS IN GAME:"
+                       GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+
+                <rowConstraints>
+                    <RowConstraints percentHeight="100" />
+                </rowConstraints>
+                <columnConstraints>
+                    <ColumnConstraints percentWidth="100" />
+                </columnConstraints>
+            </GridPane>
+
+            <GridPane GridPane.columnIndex="0" GridPane.rowIndex="1" >
+
+                <Pane fx:id="imagePlayer1"
+                      opacity="0"
+                      GridPane.columnIndex="1" GridPane.halignment="CENTER"
+                      GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                <Pane id="player"
+                      fx:id="player1Pane"
+                      maxHeight="40.0" prefHeight="40.0"
+                      opacity="0"
+                      GridPane.columnIndex="2" GridPane.halignment="CENTER"
+                      GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                <Label id="gamePlayersLabel"
+                       fx:id="player1Label"
+                       alignment="CENTER"
+                       prefHeight="40.0" prefWidth="127.0"
+                       GridPane.columnIndex="2" GridPane.halignment="CENTER"
+                       GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+
+                <Pane fx:id="imagePlayer2"
+                      opacity="0"
+                      GridPane.columnIndex="1" GridPane.halignment="CENTER"
+                      GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                <Pane id="player"
+                      fx:id="player2Pane"
+                      maxHeight="40.0" prefHeight="40.0"
+                      opacity="0"
+                      GridPane.columnIndex="2" GridPane.halignment="CENTER"
+                      GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                <Label id="gamePlayersLabel"
+                       fx:id="player2Label"
+                       alignment="CENTER"
+                       prefHeight="40.0" prefWidth="127.0"
+                       GridPane.columnIndex="2" GridPane.halignment="CENTER"
+                       GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+
+                <Pane fx:id="imagePlayer3"
+                      opacity="0.0"
+                      GridPane.columnIndex="1" GridPane.halignment="CENTER"
+                      GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                <Pane id="player"
+                      fx:id="player3Pane"
+                      maxHeight="40.0" prefHeight="40.0"
+                      opacity="0"
+                      GridPane.columnIndex="2" GridPane.halignment="CENTER"
+                      GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                <Label id="gamePlayersLabel"
+                       fx:id="player3Label"
+                       alignment="CENTER"
+                       prefHeight="40.0" prefWidth="127.0"
+                       GridPane.columnIndex="2" GridPane.halignment="CENTER"
+                       GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+
+                <rowConstraints>
+                    <RowConstraints percentHeight="5" />
+                    <RowConstraints percentHeight="25" />
+                    <RowConstraints percentHeight="25" />
+                    <RowConstraints percentHeight="25" />
+                    <RowConstraints percentHeight="20" />
+                </rowConstraints>
+                <columnConstraints>
+                    <ColumnConstraints percentWidth="5" />
+                    <ColumnConstraints percentWidth="32" />
+                    <ColumnConstraints percentWidth="58" />
+                    <ColumnConstraints percentWidth="5" />
+                </columnConstraints>
+            </GridPane>
+
+            <rowConstraints>
+                <RowConstraints percentHeight="20" />
+                <RowConstraints percentHeight="80" />
+            </rowConstraints>
+            <columnConstraints>
+                <ColumnConstraints percentWidth="100" />
+            </columnConstraints>
+        </GridPane>
+
+        <rowConstraints>
+            <RowConstraints percentHeight="15" />
+            <RowConstraints percentHeight="70" />
+            <RowConstraints percentHeight="15" />
+        </rowConstraints>
+        <columnConstraints>
+            <ColumnConstraints percentWidth="20" />
+            <ColumnConstraints percentWidth="60" />
+            <ColumnConstraints percentWidth="20" />
+        </columnConstraints>
+    </GridPane>
+
+    <!--Buttons-->
+    <GridPane alignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1" >
+
+        <GridPane alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <Button fx:id="undo"
+                    onAction="#doUndo"
+                    prefHeight="140" prefWidth="140"
+                    GridPane.rowIndex="0" GridPane.columnIndex="0"
+                    GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+
+            <Button fx:id="power"
+                    onAction="#doPower"
+                    prefHeight="140" prefWidth="140"
+                    GridPane.rowIndex="1" GridPane.columnIndex="0"
+                    GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+
+            <Button fx:id="noneDefaultLevel"
+                    onAction="#doNoneDefaultLevel"
+                    prefHeight="140" prefWidth="140"
+                    GridPane.rowIndex="2" GridPane.columnIndex="0"
+                    GridPane.halignment="CENTER" GridPane.valignment="CENTER"
+                    opacity="0" />
+
+            <Button fx:id="defaultLevel"
+                    onAction="#buildDefaultLevel"
+                    prefHeight="100" prefWidth="100"
+                    GridPane.rowIndex="2" GridPane.columnIndex="0"
+                    GridPane.valignment="CENTER" GridPane.halignment="LEFT"
+                    opacity="0" />
+
+            <Button fx:id="dome"
+                    onAction="#buildDome"
+                    prefHeight="100" prefWidth="100"
+                    GridPane.rowIndex="2" GridPane.columnIndex="0"
+                    GridPane.valignment="CENTER" GridPane.halignment="RIGHT"
+                    opacity="0" />
+
+            <rowConstraints>
+                <RowConstraints percentHeight="33.0" />
+                <RowConstraints percentHeight="33.0" />
+                <RowConstraints percentHeight="34.0" />
+            </rowConstraints>
+            <columnConstraints>
+                <ColumnConstraints percentWidth="100" />
+            </columnConstraints>
+        </GridPane>
+
+        <rowConstraints>
+            <RowConstraints percentHeight="15" />
+            <RowConstraints percentHeight="70" />
+            <RowConstraints percentHeight="15" />
+        </rowConstraints>
+        <columnConstraints>
+            <ColumnConstraints percentWidth="20" />
+            <ColumnConstraints percentWidth="60" />
+            <ColumnConstraints percentWidth="20" />
+        </columnConstraints>
+    </GridPane>
+
+    <!--GameBoard-->
+    <GridPane id="grid-pane" fx:id="board"
+              GridPane.columnIndex="1" GridPane.halignment="CENTER"
+              GridPane.rowIndex="1" GridPane.valignment="CENTER" >
+
+        <Pane id="cell00" onMouseClicked="#playerChoice" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <Pane id="cell01" onMouseClicked="#playerChoice" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Pane id="cell02" onMouseClicked="#playerChoice" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+        <Pane id="cell03" onMouseClicked="#playerChoice" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+        <Pane id="cell04" onMouseClicked="#playerChoice" GridPane.columnIndex="4" GridPane.rowIndex="0" />
+
+        <Pane id="cell10" onMouseClicked="#playerChoice" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <Pane id="cell11" onMouseClicked="#playerChoice" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <Pane id="cell12" onMouseClicked="#playerChoice" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+        <Pane id="cell13" onMouseClicked="#playerChoice" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+        <Pane id="cell14" onMouseClicked="#playerChoice" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+
+        <Pane id="cell20" onMouseClicked="#playerChoice" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <Pane id="cell21" onMouseClicked="#playerChoice" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <Pane id="cell22" onMouseClicked="#playerChoice" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+        <Pane id="cell23" onMouseClicked="#playerChoice" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+        <Pane id="cell24" onMouseClicked="#playerChoice" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+
+        <Pane id="cell30" onMouseClicked="#playerChoice" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+        <Pane id="cell31" onMouseClicked="#playerChoice" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+        <Pane id="cell32" onMouseClicked="#playerChoice" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+        <Pane id="cell33" onMouseClicked="#playerChoice" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+        <Pane id="cell34" onMouseClicked="#playerChoice" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+
+        <Pane id="cell40" onMouseClicked="#playerChoice" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+        <Pane id="cell41" onMouseClicked="#playerChoice" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+        <Pane id="cell42" onMouseClicked="#playerChoice" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+        <Pane id="cell43" onMouseClicked="#playerChoice" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+        <Pane id="cell44" onMouseClicked="#playerChoice" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+
+        <rowConstraints>
+            <RowConstraints percentHeight="20.0" />
+            <RowConstraints percentHeight="20.0" />
+            <RowConstraints percentHeight="20.0" />
+            <RowConstraints percentHeight="20.0" />
+            <RowConstraints percentHeight="20.0" />
+        </rowConstraints>
+        <columnConstraints>
+            <ColumnConstraints percentWidth="20.0" />
+            <ColumnConstraints percentWidth="20.0" />
+            <ColumnConstraints percentWidth="20.0" />
+            <ColumnConstraints percentWidth="20.0" />
+            <ColumnConstraints percentWidth="20.0" />
+        </columnConstraints>
+    </GridPane>
+
+    <rowConstraints>
+        <RowConstraints percentHeight="14.0" />
+        <RowConstraints percentHeight="73.0" />
+        <RowConstraints percentHeight="13.0" />
+    </rowConstraints>
+    <columnConstraints>
+        <ColumnConstraints percentWidth="29.5" />
+        <ColumnConstraints percentWidth="41.1" />
+        <ColumnConstraints percentWidth="29.4" />
+    </columnConstraints>
+
+    <stylesheets>
+        <URL value="@../css/GameBoardScene.css" />
+    </stylesheets>
+</GridPane>
